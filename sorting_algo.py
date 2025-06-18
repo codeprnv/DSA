@@ -1,5 +1,6 @@
 import random
 
+
 # Selection Sort
 
 # Step 1: Find the minimum in the array. (Consider the starting element as minimum at the beginning => initial pointer )
@@ -53,3 +54,39 @@ def insertion_sort(arr: list[int]):
 
 arr = [random.randint(1, 120) for _ in range(7)]
 print(f'The unsorted array is: {arr}\nThe sorted array using insertion sort is: {insertion_sort(arr)}')
+
+ 
+def merge_sort(arr: list[int], low: int, high: int):
+    if(low == high):
+        return
+    mid = low + (high - low) // 2
+    merge_sort(arr, low, mid)
+    merge_sort(arr, mid + 1, high)
+    merge(arr, low, mid , high)
+
+def merge(arr: list[int], low: int, mid: int, high: int):
+            temp = []
+            # [low....mid] and [mid+1.....high]
+            left = low
+            right = mid + 1
+            while(left <= mid and right <= high):
+                if(arr[left] <= arr[right]):
+                    temp.append(arr[left])
+                    left += 1
+                else:
+                    temp.append(arr[right])
+                    right +=1
+            while(left <= mid):
+                temp.append(arr[left])
+                left += 1
+            while(right <= high):
+                temp.append(arr[right])
+                right += 1
+            for i in range(low, high + 1):
+                arr[i] = temp[i - low]
+            
+
+arr = [random.randint(0, 100) for _ in range(8)]
+print(f'Unsorted array is: {arr}')
+merge_sort(arr, 0, len(arr) - 1)
+print(f'Sorted array using merge sort is: {arr}')
