@@ -44,3 +44,6 @@ def element_frequency():
 
 min_num, max_num = element_frequency()
 print(f'Element with minimum frequency is: {min_num}\nElement with maximum frequency is: {max_num}') 
+
+
+# Changes
