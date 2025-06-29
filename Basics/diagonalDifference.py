@@ -24,5 +24,3 @@ matrix = [
 ]
 res = diagonalDifference(matrix)
 print(f'The absolute difference between diagonals of this matrix is: {res}')
-
-# Changes
