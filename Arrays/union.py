@@ -43,3 +43,6 @@ arr2 = [2,3,4,4,5,11,12]
 
 res = union(arr1, arr2)
 print(f'First array is: {arr1}\nSecond array is: {arr2}\nUnion of both array is: {res}')
+
+
+# Changes
