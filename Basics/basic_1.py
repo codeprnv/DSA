@@ -90,7 +90,7 @@ def check_prime(n):
     else:
         print(f'{n} is not a prime number')
 
-# check_prime(n)
+check_prime(n)
 
 #  7. Problem Statement: Given an integer N, return all divisors of N.
 
@@ -104,4 +104,6 @@ def find_divisors(n):
             divisors.append(n // i)
     print(f'Divisors of {n} are: {sorted(divisors)}')
     
-find_divisors(n)
+# find_divisors(n)
+
+# Changes
