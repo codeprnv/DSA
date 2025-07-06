@@ -77,18 +77,18 @@ def armstrong_number(n):
 #  6. Problem Statement: Given an integer N, return true it is an Prime number otherwise return false.
 
 def check_prime(n):
-    import math
-    sqrt = int(math.sqrt(n))
-    counter = 0
-    for i in range(1, sqrt + 1):
-        if(n % i == 0):
-            counter += 1
-        if(i != n // i):
-            counter += 1
-    if(counter == 2):
-        print(f'{n} is prime number')
-    else:
+    if(n < 2):
         print(f'{n} is not a prime number')
+    else:
+        is_prime = True
+        for i in range(2, int(n ** 0.5) + 1):
+            if(n % i == 0):
+                is_prime = False
+                break
+        if is_prime:
+            print(f'{n} is a prime number')
+        else:
+            print(f'{n} is not a prime number')
 
 check_prime(n)
 
